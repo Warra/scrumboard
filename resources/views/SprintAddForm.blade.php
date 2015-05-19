@@ -7,6 +7,13 @@
 
 </head>
 <body>
+    <div>
+        <ul class="nav nav-pills" role="tablist">
+            <li class="active"><a href="/task/add/show">Add Tasks</a></li>
+            <li class="active"><a href="/sprint/add/show">Add Sprints</a></li>
+            <li class="active"><a href="/scrumboard">Scrumboard</a></li>
+        </ul>
+    </div>
     @if(isset($success))
         <div>
             <span>{!! $success !!}</span>

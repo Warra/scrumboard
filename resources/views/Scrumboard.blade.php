@@ -11,6 +11,13 @@
 
 </head>
 <body>
+<div class="bs-example">
+    <ul class="nav nav-pills" role="tablist">
+        <li class="active"><a href="/task/add/show">Add Tasks</a></li>
+        <li class="active"><a href="/sprint/add/show">Add Sprints</a></li>
+        <li class="active"><a href="/scrumboard">Scrumboard</a></li>
+    </ul>
+</div>
 <div>
     <div id='todo' name='todo' class='col-md-3 bordered-medium status'>
         <span><h3>To Do</h3></span>
