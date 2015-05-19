@@ -37,5 +37,6 @@ Route::get('/task/add/show', [
 Route::post('/task/add/show', 'TaskController@getAddInputs');
 
 //scrumboard routes
+Route::post('/sprint/select', 'ScrumBoardController@getSprintInput');
 Route::get('/scrumboard', 'ScrumBoardController@show');
 Route::get('/scrumboard/update', 'ScrumBoardController@updateTask');

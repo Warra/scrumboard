@@ -21,7 +21,6 @@ class TaskController extends Controller {
 
     public function addShow() 
     {
-
         return view('TaskAddForm', [
             'sprintDetails' => $this->getSprintDetails(),
             'statuses' => $this->statuses 
@@ -30,10 +29,10 @@ class TaskController extends Controller {
 
 
 
-    public function add($sprint_number, $name, $description, $points, $status)
+    public function add($sprint_id, $name, $description, $points, $status)
     {
         $task = [
-            'sprint_number' => $sprint_number,
+            'sprint_id' => $sprint_id,
             'name' => $name,
             'description' => $description,
             'points' => $points,

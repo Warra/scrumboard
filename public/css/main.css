@@ -11,6 +11,17 @@
     margin: 1em 1em 1em 1em;
 }
 
+.pull--left{
+    float: left;
+    position: relative;
+}
+
+.pull--right{
+    float: right;
+    position: relative;
+}
+
+
 /*.status {
     height: 100%;
     width: auto;

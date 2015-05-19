@@ -40,6 +40,6 @@ function changeStatusHeights() {
     }).get(),
 
     maxHeight = Math.max.apply(null, heights);
-    maxHeight = maxHeight * 5;
+    maxHeight = maxHeight * 3;
     $('.status').css('height', maxHeight);
 }

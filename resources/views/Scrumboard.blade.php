@@ -11,12 +11,22 @@
 
 </head>
 <body>
-<div class="bs-example">
-    <ul class="nav nav-pills" role="tablist">
-        <li class="active"><a href="/task/add/show">Add Tasks</a></li>
-        <li class="active"><a href="/sprint/add/show">Add Sprints</a></li>
-        <li class="active"><a href="/scrumboard">Scrumboard</a></li>
-    </ul>
+<div>
+    <div class='col-md-4'>
+        <ul class="nav nav-pills" role="tablist">
+            <li class="active"><a href="/task/add/show">Add Tasks</a></li>
+            <li class="active"><a href="/sprint/add/show">Add Sprints</a></li>
+            <li class="active"><a href="/scrumboard">Scrumboard</a></li>
+        </ul>
+    </div>
+    <div class='col-md-4' style='height:40px;'></div>
+    <div class='col-md-4 form-inline' style='height:40px;'>
+        {!! Form::open(['url'=>action('ScrumBoardController@getSprintInput')],['class'=>'form-inline']) !!}
+        {!! Form::label('sprintNumber', 'Sprint') !!}
+        {!! Form::select('sprintNumber', $sprintDetails, null, ['class' => 'form-control']) !!}
+        {!! Form::submit('Select Sprint', ['class'=>'form-control']) !!}
+        {!! Form::close() !!}
+    </div>
 </div>
 <div>
     <div id='todo' name='todo' class='col-md-3 bordered-medium status'>
