@@ -38,3 +38,4 @@ Route::post('/task/add/show', 'TaskController@getAddInputs');
 
 //scrumboard routes
 Route::get('/scrumboard', 'ScrumBoardController@show');
+Route::get('/scrumboard/update', 'ScrumBoardController@updateTask');

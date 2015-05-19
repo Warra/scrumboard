@@ -1,3 +1,17 @@
 .bordered-medium {
     border: 2px solid black;
 }
+
+.bordered-light {
+    border: 1px solid black;
+}
+
+.task {
+    padding: 2em 2em 2em 2em;
+    margin: 1em 1em 1em 1em;
+}
+
+/*.status {
+    height: 100%;
+    width: auto;
+}*/
