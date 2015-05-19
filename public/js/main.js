@@ -1,8 +1,5 @@
 $(function(){
     changeStatusHeights();
-    // ('.task div').draggable({
-    //     helper: clone
-    // });
 
     $('.status .task').draggable({
         helper: 'clone'
@@ -26,9 +23,8 @@ $(function(){
                 },
                 success: function(){
                     $(ui.draggable).remove();
-                    $('#' + status).append(taskDiv);
-                    console.log();
-                    $('div#' + id).draggable({
+                    $('#' + status).append($(ui.draggable));
+                    $('div [name="'+name+'"]').draggable({
                         helper: 'clone'
                     });
                 }
