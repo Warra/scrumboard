@@ -11,11 +11,11 @@
 
 </head>
 <body>
-<div>
+<div class="border" style="height:40px;">
     <div class='col-md-4'>
         <ul class="nav nav-pills" role="tablist">
-            <li class="active"><a href="/task/add/show">Add Tasks</a></li>
             <li class="active"><a href="/sprint/add/show">Add Sprints</a></li>
+            <li class="active"><a href="/task/add/show">Add Tasks</a></li>
             <li class="active"><a href="/scrumboard">Scrumboard</a></li>
         </ul>
     </div>
@@ -28,7 +28,7 @@
         {!! Form::close() !!}
     </div>
 </div>
-<div>
+<div class='border'>
     <div id='todo' name='todo' class='col-md-3 bordered-medium status'>
         <span><h3>To Do</h3></span>
         @foreach($todos as $todo)

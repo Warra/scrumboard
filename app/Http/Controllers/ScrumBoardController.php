@@ -20,7 +20,8 @@ class ScrumBoardController extends Controller {
     public function show()
     {
         $allSprints = $this->getSprintDetails();
-        $this->getAllTasks();
+        // $this->getAllTasks();
+        $this->getSprintInput();
         return view('Scrumboard', [
             'todos'=>$this->todo,
             'starteds'=>$this->started,
@@ -30,40 +31,12 @@ class ScrumBoardController extends Controller {
         ]);
     }
 
-    public function getAllTasks()
-    {
-        $tasks = DB::table('task')->get();
-        $sortedTasks = [];
-        $todo = [];
-        $started = [];
-        $blocking = [];
-        $done = [];
-        foreach($tasks as $task) {
-            switch ($task->status) {
-                case 'todo':
-                    array_push($todo, $task);
-                break;
-                case 'started':
-                    array_push($started, $task);
-                break;
-                case 'blocking':
-                    array_push($blocking, $task);
-                break;
-                case 'done':
-                    array_push($done, $task);
-                break;
-            }
-        }
-        $this->todo = $todo;
-        $this->started = $started;
-        $this->blocking = $blocking;
-        $this->done = $done;
-    }
-
     public function getSprintInput() {
-        $sprintInput = Input::get('sprintNumber');
-        // dd($sprintInput); actually gets the ID
-        // $sprintNumber = DB::table('sprint')->where('sprint_number', $sprintInput)->first();
+        if(Input::get('sprintNumber') === null) {
+            $sprintInput = 1;
+        }else {
+            $sprintInput = Input::get('sprintNumber');
+        }
         $tasks = $this->getSprintTasks($sprintInput);
         $allSprints = $this->getSprintDetails();
 

@@ -20,6 +20,9 @@
     float: right;
     position: relative;
 }
+.border{
+    margin: 1em 1em 1em 1em;
+}
 
 
 /*.status {

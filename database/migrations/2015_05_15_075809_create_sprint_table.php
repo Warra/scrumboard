@@ -17,9 +17,9 @@ class CreateSprintTable extends Migration {
 			$table->increments('id');
 			$table->integer('sprint_number');
 			$table->string('description');
-			$table->date('start_date');
-			$table->date('end_date');
-			$table->integer('total_points');
+			$table->date('start_date')->nullable();
+			$table->date('end_date')->nullable();
+			$table->integer('total_points')->nullable();
 			$table->softDeletes();		
 			$table->timestamps();
 		});

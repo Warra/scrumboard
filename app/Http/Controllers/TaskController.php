@@ -45,13 +45,13 @@ class TaskController extends Controller {
 
     public function getAddInputs() 
     {
-        $sprint_number = Input::get('sprint_number');
+        $sprint_id = Input::get('sprint_number');
         $name = Input::get('name');
         $description = Input::get('description');
         $points = Input::get('points');
         $status = Input::get('status');
 
-        $this->add($sprint_number, $name, $description, $points, $status);
+        $this->add($sprint_id, $name, $description, $points, $status);
         $success = 'Task added successfully!';
 
         $statuses = [

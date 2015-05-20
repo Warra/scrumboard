@@ -16,7 +16,7 @@ class Task extends Model {
      *
      * @var array
      */
-    protected $fillable = ['name', 'description', 'points', 'status'];
+    protected $fillable = ['name', 'description', 'points', 'status', 'sprint_id'];
 
     /**
      * Relationship between Sprints and Tasks
